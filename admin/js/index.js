@@ -24,7 +24,7 @@ $(function () {
 
     $.ajax({
         type: 'get',
-        url: 'http://localhost:8080/api/v1/admin/user/info',
+        url: bigNews.user_info,
         dataType: 'json',
         success: function (backData) {
             // console.log(backData);

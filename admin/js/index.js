@@ -2,8 +2,9 @@ $(function () {
 
     /* ============将以下代码直接写入jQuery中============ */
 
-    //  ajax全局配置：就是给所有的ajax添加默认设置(请求头) 
+    //  ajax全局配置：就是给所有的ajax添加默认设置(请求头) 原理：原型链
 
+    // ===== ajaxSetup() 方法为将来的 AJAX 请求设置默认值. =====
     // $.ajaxSetup({
     //     // 所有的ajax发送之前会执行这个函数(一般在这里设置默认请求头)
     //     beforeSend: function (xhr) {
@@ -22,6 +23,7 @@ $(function () {
     //     }
     // });
 
+    // 1. ajax请求获取用户信息
     $.ajax({
         type: 'get',
         url: bigNews.user_info,
@@ -51,5 +53,27 @@ $(function () {
     // xhr.onload = function () {
     //     console.log(xhr.responseText)
     // };
+
+    // 2.改主页侧边栏点击样式
+    // 2.1 一级菜单的点击事件
+    $('.level01').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        // 2.2 如果点击的是第二个一级菜单，此时还需要一个下拉的动画
+        if ($(this).index() == 1) {
+            // 让右侧小箭头相应的旋转
+            $('.icon-arrowdownl').toggleClass('rotate0');
+            // 二级菜单下拉或上滑
+            $('.level02').slideToggle();
+            // 打开二级菜单时，首先默认第一个高亮
+            $('.level02 li:eq(0) a')[0].click();
+        } else {// 如果点击的不是二级菜单，需要取消二级菜单的高亮
+            $('.level02 li').removeClass('active');
+        }
+    });
+
+    // 二级菜单的点击样式
+    $('.level02 li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
 
 });

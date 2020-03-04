@@ -71,9 +71,17 @@ $(function () {
         }
     });
 
-    // 二级菜单的点击样式
+    // 2.2 二级菜单的点击样式
     $('.level02 li').click(function () {
         $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    // 3.退出主页
+    $('.logout').click(function () {
+        // 移出token
+        localStorage.removeItem('token');
+        // 移出后，跳转登录页
+        window.location.href = './login.html';
     });
 
 });

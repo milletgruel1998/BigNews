@@ -7,8 +7,9 @@
 (function (w) {
     let baseURL = 'http://localhost:8080/api/v1'; //基地址
     let bigNews = {
-        user_login: baseURL + '/admin/user/login',
-        user_info: baseURL + '/admin/user/info',
+        baseURL: baseURL,// 基地址
+        user_login: baseURL + '/admin/user/login',// 用户登录
+        user_info: baseURL + '/admin/user/info',// 用户信息
     }
     w.bigNews = bigNews;
 })(window);

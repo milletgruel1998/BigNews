@@ -11,6 +11,7 @@
         user_login: baseURL + '/admin/user/login',// 用户登录
         user_info: baseURL + '/admin/user/info',// 用户信息
         user_detail: baseURL + '/admin/user/detail',//用户详情
+        user_edit: baseURL + '/admin/user/edit',//修改用户信息
     }
     w.bigNews = bigNews;
 })(window);

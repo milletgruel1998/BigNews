@@ -12,6 +12,9 @@
         user_info: baseURL + '/admin/user/info',// 用户信息
         user_detail: baseURL + '/admin/user/detail',//用户详情
         user_edit: baseURL + '/admin/user/edit',//修改用户信息
+        allArticle_category: baseURL + '/admin/category/list',//所有文章类别
+        addArticle_category: baseURL + '/admin/category/add',//新增文章类别
+        editArticle_category: baseURL + '/admin/category/edit', // 编辑文章类别
     }
     w.bigNews = bigNews;
 })(window);

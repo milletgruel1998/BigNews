@@ -76,9 +76,24 @@ $(function () {
         }
     });
 
-
-
-
     // 4. 删除类别
+    $('tbody').on('click', '.delete', function () {
+
+        $.ajax({
+            type: 'post',
+            url: bigNews.deleteArticle_category,
+            data: {
+                id: $(this).attr('data_id'),
+            },
+            dataType: 'json',
+            success: function (backData) {
+                if (backData.code == 204) {
+                    alert(backData.msg);
+                    window.location.reload();
+                }
+            }
+        });
+
+    });
 
 });

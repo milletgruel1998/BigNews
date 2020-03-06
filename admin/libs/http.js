@@ -15,6 +15,9 @@
         allArticle_category: baseURL + '/admin/category/list',//所有文章类别
         addArticle_category: baseURL + '/admin/category/add',//新增文章类别
         editArticle_category: baseURL + '/admin/category/edit', // 编辑文章类别
+        deleteArticle_category: baseURL + '/admin/category/delete',//删除文章类别
+        article_query: baseURL + '/admin/article/query', //文章搜索
+        article_delete: baseURL + '/admin/article/delete',//文章删除
     }
     w.bigNews = bigNews;
 })(window);

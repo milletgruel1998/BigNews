@@ -18,6 +18,8 @@
         deleteArticle_category: baseURL + '/admin/category/delete',//删除文章类别
         article_query: baseURL + '/admin/article/query', //文章搜索
         article_delete: baseURL + '/admin/article/delete',//文章删除
+        article_gain: baseURL + '/admin/article/search',// 文章信息获取
+        article_edit: baseURL + '/admin/article/edit',// 文章编辑
     }
     w.bigNews = bigNews;
 })(window);

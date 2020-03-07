@@ -95,4 +95,13 @@ $(function () {
         });
     });
 
+    // 点击文章列表中的发表文章让主页侧边栏中的发表文章高亮
+    $('#release_btn').click(function () {
+        /* 问题：嵌套页面如何获取主页面的元素
+            $('选择器',window.document)：在当前页面DOM树中查找元素
+            $('选择器',window.parent.document)：在父页面DOM树中查找元素 
+        */
+        $('.level02>li:eq(1)', window.parent.document).addClass('active').siblings().removeClass('active');
+    });
+
 });

@@ -20,6 +20,7 @@
         article_delete: baseURL + '/admin/article/delete',//文章删除
         article_gain: baseURL + '/admin/article/search',// 文章信息获取
         article_edit: baseURL + '/admin/article/edit',// 文章编辑
+        article_release: baseURL + '/admin/article/publish',// 文章发布
     }
     w.bigNews = bigNews;
 })(window);

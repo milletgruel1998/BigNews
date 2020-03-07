@@ -21,6 +21,9 @@
         article_gain: baseURL + '/admin/article/search',// 文章信息获取
         article_edit: baseURL + '/admin/article/edit',// 文章编辑
         article_release: baseURL + '/admin/article/publish',// 文章发布
+        comment_list: baseURL + '/admin/comment/search',//评论列表
+        comment_agree: baseURL + '/admin/comment/pass',//评论通过
+        comment_refuse: baseURL + '/admin/comment/reject',//评论不通过
     }
     w.bigNews = bigNews;
 })(window);

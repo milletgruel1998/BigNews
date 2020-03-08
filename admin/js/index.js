@@ -76,12 +76,18 @@ $(function () {
         $(this).addClass('active').siblings().removeClass('active');
     });
 
-    // 3.退出主页
+    // 3. 点击个人主页跟侧边栏的个人主页联动
+    $('.uesr_info').click(function () {
+        $('#user').addClass('active').siblings('.level01').removeClass('active');
+    });
+
+    // 4.退出主页
     $('.logout').click(function () {
         // 移出token
         localStorage.removeItem('token');
         // 移出后，跳转登录页
         window.location.href = './login.html';
     });
+
 
 });

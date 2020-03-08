@@ -6,7 +6,6 @@ $(function () {
         url: bigNews.user_detail,
         dataType: 'json',
         success: function (backData) {
-            console.log(backData);
             // $('.username').val(backData.data.username);//用户名
             // $('.nickname').val(backData.data.nickname);//昵称
             // $('.email').val(backData.data.email);//邮箱
@@ -47,7 +46,7 @@ $(function () {
             contentType: false,
             processData: false,
             success: function (backData) {
-                console.log(backData);
+                // console.log(backData);
                 if (backData.code == 200) {
                     alert('修改成功！');
                     // window.location.reload(); // 此时的window是user页面的。无法刷新index

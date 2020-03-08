@@ -24,6 +24,11 @@
         comment_list: baseURL + '/admin/comment/search',//评论列表
         comment_agree: baseURL + '/admin/comment/pass',//评论通过
         comment_refuse: baseURL + '/admin/comment/reject',//评论不通过
+        comment_delete: baseURL + '/admin/comment/delete',//评论删除
+        article_data: baseURL + '/admin/data/info',// 文章统计数据
+        day_articleNum: baseURL + '/admin/data/article', // 日新增文章数
+        category_article: baseURL + '/admin/data/category',// 分类文章数量比
+        article_visit: baseURL+'/admin/data/visit',// 日文章访问量
     }
     w.bigNews = bigNews;
 })(window);

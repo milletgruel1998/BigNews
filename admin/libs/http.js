@@ -28,7 +28,14 @@
         article_data: baseURL + '/admin/data/info',// 文章统计数据
         day_articleNum: baseURL + '/admin/data/article', // 日新增文章数
         category_article: baseURL + '/admin/data/category',// 分类文章数量比
-        article_visit: baseURL+'/admin/data/visit',// 日文章访问量
+        article_visit: baseURL + '/admin/data/visit',// 日文章访问量
+        //---------------------------前台接口--------------------------------
+        index_focusPic: baseURL + '/index/hotpic', // 首页焦点图
+        index_articleCategory: baseURL + '/index/category', // 文章类型
+        index_nowInfo: baseURL + '/index/latest', // 最新资讯
+        hot_ranking: baseURL + '/index/rank', // 热门排行
+        now_comment: baseURL + '/index/latest_comment', // 最新评论
+        focus_attention: baseURL + '/index/attention', // 焦点关注
     }
     w.bigNews = bigNews;
 })(window);

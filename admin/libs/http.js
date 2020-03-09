@@ -36,6 +36,7 @@
         hot_ranking: baseURL + '/index/rank', // 热门排行
         now_comment: baseURL + '/index/latest_comment', // 最新评论
         focus_attention: baseURL + '/index/attention', // 焦点关注
+        article_search: baseURL + '/index/search',// 文章搜索
     }
     w.bigNews = bigNews;
 })(window);

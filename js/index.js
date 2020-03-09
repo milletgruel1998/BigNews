@@ -54,7 +54,7 @@ $(function () {
         url: bigNews.now_comment,
         dataType: 'json',
         success: function (backData) {
-            // console.log(backData);
+            console.log(backData);
             $('.comment_list').html(template('now_comment', backData));
         }
     });

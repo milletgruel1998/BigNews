@@ -38,7 +38,7 @@
                         <li class="up"></li>
                         {{ each data v }}
                             <!-- data_id 文章类别id -->
-                           <li data_id={{v.id}}><a href="./list.html">{{v.name}}</a></li> 
+                           <li><a href="./list.html?id={{v.id}}">{{v.name}}</a></li> 
                         {{ /each }}
                     </script>
                 </ul>
@@ -46,8 +46,7 @@
             <ul class="left_menu fl">
                 <script id="article_category" type="text/html">
                     {{ each data v }}
-                        <!-- data_id 文章类别id -->
-                        <li data_id={{v.id}}><a href="./list.html">{{v.name}}</a></li> 
+                        <li><a href="./list.html?id={{v.id}}">{{v.name}}</a></li> 
                     {{ /each }}
                 </script>
             </ul>
@@ -66,7 +65,7 @@
                     {{ each data v }}
                         <!-- v.id 图片对应的文章id -->
                         <li data_id={{ v.id }}> 
-                            <a href="#"><img src="{{ v.cover }}" alt=""></a>
+                            <a href="./article.html?id={{v.id}}"><img src="{{ v.cover }}" alt=""></a>
                             <p>{{ v.title }}</p>
                         </li>
                     {{ /each }}
@@ -82,8 +81,8 @@
                 <script id="nowInfo" type="text/html">
                     {{ each data v }}
                         <div class="common_news_list" data_id={{v.id}} category_id={{v.categoryId}} ><!-- data_id 文章id category_id 文章分类id -->
-                            <a href="#" class="list_pic"><img src="{{v.cover}}" alt=""></a>
-                            <h4><a href="#">{{ v.title }}</a></h4>
+                            <a href="./article.html?id={{v.id}}" class="list_pic"><img src="{{v.cover}}" alt=""></a>
+                            <h4><a href="./article.html?id={{v.id}}">{{ v.title }}</a></h4>
                             <p>{{@ v.intro }}</p>
                             <div class="new_info">
                                 <span>标签：{{ v.category }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;阅读( {{v.read}}
@@ -104,7 +103,7 @@
                     <script id="hot_ranking" type="text/html">
                         {{ each data v }}
                             <!-- data_id 文章id -->
-                            <li data_id={{v.id}}><span>{{ $index+1 }}</span><a href="#">{{v.title}}</a></li>
+                            <li><span>{{ $index+1 }}</span><a href="./article.html?id={{v.id}}">{{v.title}}</a></li>
                         {{ /each }}
                     </script>
                 </ul>

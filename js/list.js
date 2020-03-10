@@ -96,8 +96,54 @@ $(function () {
             }
         });
     });
-    
+
     /* 进入页面先执行一次按钮的点击事件 */
     $('.search_btn').click();
+
+    // // 从index页面跳转过来
+    // $.ajax({
+    //     type: 'get',
+    //     url: bigNews.article_search,
+    //     data: {
+    //         type: window.location.href.split('=')[1]
+    //     },
+    //     dataType: 'json',
+    //     success: function (backData) {
+    //         console.log(backData);
+    //         $('.article_content').html(template('news_list_index', backData));
+
+    //         // ajax分页
+    //         // 1. 首先销毁之前旧的分页插件
+    //         $('#pagination').twbsPagination('destroy');
+    //         // 2. 生成新的分页插件
+    //         $('#pagination').twbsPagination({
+    //             totalPages: Math.ceil(backData.data.totalCount / 6), // 总页数
+    //             visiblePages: 8, // 可见页数
+    //             startPage: 1, //起始页
+    //             first: '首页',
+    //             prev: '上一页',
+    //             next: '下一页',
+    //             last: '尾页',
+    //             onPageClick: function (event, page) {
+    //                 $('#page-content').text('Page ' + page);
+    //                 /* 点击第几页，向服务器请求第几页的数据 */
+    //                 $.ajax({
+    //                     type: 'get',
+    //                     url: bigNews.article_search,
+    //                     data: {
+    //                         // key: $('.search_txt').val(),
+    //                         page: page
+    //                     },
+    //                     dataType: 'json',
+    //                     success: function (backData) {
+    //                         $('.article_content').html(template('news_list_index', backData));
+
+    //                     }
+    //                 });
+
+    //             }
+    //         });
+    //     }
+    // });
 
 });

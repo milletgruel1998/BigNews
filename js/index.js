@@ -70,4 +70,17 @@ $(function () {
         }
     });
 
+    // 菜单下拉列表
+    // $('.level_two').on('click', '.article_cate', function () {
+    //     // 文章搜索
+    //     $.ajax({
+    //         type: 'get',
+    //         url: bigNews.article_search,
+    //         dataType: 'json',
+    //         success: function (backData) {
+    //             console.log(backData);
+    //         }
+    //     });
+    // });
+
 });

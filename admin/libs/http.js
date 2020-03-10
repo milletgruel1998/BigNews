@@ -37,6 +37,9 @@
         now_comment: baseURL + '/index/latest_comment', // 最新评论
         focus_attention: baseURL + '/index/attention', // 焦点关注
         article_search: baseURL + '/index/search',// 文章搜索
+        article_detailCon: baseURL + '/index/article', // 文章详细内容
+        article_commentList: baseURL + '/index/get_comment', // 评论列表
+        release_comment: baseURL + '/index/post_comment' // 发表评论
     }
     w.bigNews = bigNews;
 })(window);
